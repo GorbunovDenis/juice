@@ -1,0 +1,155 @@
+.connection {
+  padding: 0 0 100px 0;
+}
+
+.connection__text {
+  margin-bottom: -100px;
+  font-size: 30px;
+}
+
+.connection__form {
+  max-width: 575px;
+}
+.connection__label {
+  display: block;
+  margin: 25px 0 0 0;
+}
+.connection {
+  padding: 100px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__text {
+    max-width: 540px;
+    font-size: 36px;
+    @extend %Gilroy-700;
+    margin-bottom: -160px;
+  }
+
+  &__form {
+    max-width: 860px;
+  }
+
+  &__form input {
+    color: #828897;
+    box-shadow: 0px 7px 68.6px 1.4px rgba(232, 207, 160, 0.3);
+    border-radius: 45px;
+    border: none;
+    background-color: #ffffff;
+    padding: 25px 35px;
+    font-weight: normal;
+    font-size: 18px;
+    // width: 288px;
+    text-align: center;
+    margin-right: 20px;
+
+    &:focus {
+      outline: transparent;
+      box-shadow: 0 0 0 2px #f3c747;
+    }
+  }
+
+  &__form button {
+    @extend %btn;
+  }
+
+  &__img {
+    padding-right: 100px;
+    object-fit: contain;
+    width: 450px;
+    height: 399px;
+  }
+
+  &__label {
+    margin: 50px 0 20px;
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    color: #3a3f4c;
+    font-size: 14px;
+    @extend %Gilroy-500;
+  }
+
+  &__input {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+
+    &:checked + .connection__checkbox {
+      background-image: url('../images/icons/check-on.png');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    margin-left: -35px;
+    // margin-top: 6px;
+    width: 16px;
+    height: 16px;
+    background-color: #3b404d;
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .connection {
+    &__img {
+      display: none;
+    }
+    &__form {
+      width: 100%;
+    }
+    &__text {
+      margin-bottom: 40px;
+      font-size: 30px;
+    }
+    &__form input {
+      padding: 26px 19px;
+    }
+    &__form button {
+      padding: 23px 66px;
+    }
+    &__form button:after {
+      content: '';
+      background-image: none;
+    }
+    &__label {
+      margin: 30px 0 20px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .connection {
+    padding: 0;
+    &__inner {
+      text-align: center;
+    }
+    &__label {
+      text-align: left;
+    }
+    &__form button {
+      padding: 25px 126px;
+      font-size: 14px;
+      width: 100%;
+    }
+    &__form input {
+      margin-right: 0px;
+      padding: 25px 75px;
+      font-size: 14px;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+    &__text {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,194 @@
+.reviews {
+  padding: 180px 0;
+
+  &__item {
+    display: flex;
+  }
+
+  &__title {
+    max-width: 825px;
+    color: #3a3f4c;
+    font-size: 92px;
+    @extend %Gilroy-900;
+    line-height: 1.2;
+    margin-bottom: 60px;
+  }
+
+  &__text {
+    max-width: 380px;
+    color: #828897;
+    font-size: 20px;
+    @extend %Gilroy-500;
+    line-height: 1.9;
+    margin-bottom: 60px;
+  }
+
+  &__content {
+    min-height: 510px;
+  }
+
+  &__btn {
+    @extend %btn;
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .slick-dots {
+    display: flex;
+    position: absolute;
+    bottom: 130px;
+    left: 45px;
+
+    li {
+      margin: 0 20px;
+
+      button {
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        font-size: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid #f3c747;
+        cursor: pointer;
+        outline: transparent;
+      }
+
+      &.slick-active {
+        button {
+          background-color: #f3c747;
+        }
+      }
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    top: 43%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: transparent;
+
+    path {
+      fill: #3a3f4c;
+    }
+  }
+
+  .slick-next {
+    right: -103px;
+  }
+
+  .slick-prev {
+    left: -103px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .reviews {
+    padding: 200px 0 50px;
+    &__title {
+      font-size: 50px;
+      margin-bottom: 40px;
+    }
+    &__text {
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+  }
+  & .slick-dots {
+    bottom: 35px;
+  }
+}
+@media (max-width: 768px) {
+  .filter {
+    overflow-x: scroll;
+  }
+  .mobile-overflow {
+    width: 1000px;
+  }
+  .products .products-card__inner {
+    width: 348px;
+  }
+
+  .reviews {
+    padding: 70px 0 0 0;
+    margin-bottom: 100px;
+    &__title {
+      width: 67%;
+      font-size: 56px;
+      font-family: 'Gilroy-Medium';
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+    & .slick-dots {
+      bottom: 40px;
+    }
+    &__photo {
+      position: absolute;
+      width: 53%;
+      right: -95px;
+      top: 0;
+    }
+    & .slick-dots li button {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .reviews {
+    padding-top: 30px;
+    &__content {
+      width: 100%;
+      min-height: 340px;
+    }
+
+    &__item {
+      position: relative;
+    }
+    &__title {
+      padding-top: 25px;
+      font-family: 'Gilroy-Black';
+      font-weight: 900;
+      font-size: 24px;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 1.2;
+      margin-bottom: 65px;
+      max-width: 175px;
+    }
+    &__photo {
+      position: absolute;
+      width: 40%;
+      right: -2px;
+    }
+    &__btn {
+      width: 100%;
+      padding: 25px 71px;
+      font-size: 14px;
+      &::after {
+        right: 50px;
+      }
+    }
+    & .slick-dots {
+      display: none;
+    }
+    & .slick-dots li button {
+      display: none;
+    }
+  }
+}

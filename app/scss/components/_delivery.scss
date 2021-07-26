@@ -1,0 +1,64 @@
+.delivery {
+  margin-bottom: 200px;
+
+  &__box-text {
+    max-width: 625px;
+    line-height: 1.2;
+    font-size: 36px;
+    @extend %Gilroy-700;
+    margin-bottom: 65px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child):after {
+      content: '';
+      top: 85%;
+      transform: translateY(-50%);
+      right: -115px;
+      position: absolute;
+      background-image: url('../images/delivery/angle-next.svg');
+      background-repeat: no-repeat;
+      width: 53px;
+      height: 53px;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 35px;
+  }
+
+  &__text {
+    max-width: 247px;
+    font-size: 26px;
+    @extend %Gilroy-500;
+    position: relative;
+    line-height: 1.2;
+  }
+
+  &__circle {
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    background-color: #fbbb48;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__number {
+    display: inline-block;
+    color: #3a3f4c;
+    font-size: 36px;
+    @extend %Gilroy-700;
+    position: relative;
+  }
+}

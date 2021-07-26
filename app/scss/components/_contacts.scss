@@ -1,0 +1,99 @@
+.footer {
+  padding-bottom: 175px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: url('../images/leaf-footer.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -115px;
+    right: 0;
+    width: 178px;
+    height: 306px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin-top: -25px;
+  }
+
+  &__text {
+    max-width: 750px;
+    font-size: 36px;
+    @extend %Gilroy-700;
+    line-height: 1.2;
+    margin-bottom: 60px;
+  }
+
+  &__contact {
+    @extend %Gilroy-700;
+    font-size: 36px;
+    font-style: normal;
+    display: block;
+    line-height: 1.2;
+  }
+
+  &__site {
+    color: #ffbc3a;
+    font-style: normal;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 110px;
+  }
+
+  &__box-contact {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background-color: #fbbb48;
+    position: relative;
+    margin-right: 30px;
+    font-size: 0;
+  }
+
+  &__map {
+    object-fit: cover;
+    width: 624px;
+    height: auto;
+  }
+}
+
+.social {
+  display: flex;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background-color: #fbbb48;
+    margin-right: 50px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  &__icon {
+    display: block;
+    height: 41px;
+    fill: #3a3f4c;
+  }
+}
